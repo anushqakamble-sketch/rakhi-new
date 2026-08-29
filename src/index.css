@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Keyframe for the entire Rakhi tying entrance */
+  @keyframes rakhiTieEntrance {
+    0% {
+      opacity: 0;
+      transform: scale(0.65) translateY(24px) rotate(-6deg);
+      filter: blur(8px) brightness(1.5);
+    }
+    40% {
+      opacity: 0.9;
+      transform: scale(1.06) translateY(-6px) rotate(2deg);
+      filter: blur(0px) brightness(1.2);
+    }
+    70% {
+      transform: scale(0.97) translateY(2px) rotate(-1deg);
+      filter: brightness(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotate(0deg);
+      filter: brightness(1);
+    }
+  }
+
+  /* Keyframe for thread tying wrap (expanding outward smoothly like being wrapped around the wrist) */
+  @keyframes threadTieWrap {
+    0% {
+      clip-path: inset(0 50% 0 50%);
+      opacity: 0;
+      transform: scaleX(0.2);
+    }
+    50% {
+      clip-path: inset(0 20% 0 20%);
+      opacity: 0.7;
+      transform: scaleX(0.85);
+    }
+    100% {
+      clip-path: inset(0 0% 0 0%);
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  /* Shimmer light sweep across the Rakhi */
+  @keyframes rakhiShimmer {
+    0% {
+      transform: translateX(-120%) rotate(25deg);
+      opacity: 0;
+    }
+    30% {
+      opacity: 0.8;
+    }
+    70% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(220%) rotate(25deg);
+      opacity: 0;
+    }
+  }
+
+  /* Gentle sacred floating loop after tying */
+  @keyframes rakhiFloatIdle {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0.8deg);
+    }
+  }
+
+  /* Radial holy aura pulse */
+  @keyframes sacredAuraPulse {
+    0%, 100% {
+      transform: scale(0.95);
+      opacity: 0.35;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.75;
+    }
+  }
+
+  /* Wrist golden band glow */
+  @keyframes wristTieGlow {
+    0% {
+      width: 0%;
+      opacity: 0;
+    }
+    60% {
+      width: 85%;
+      opacity: 0.8;
+    }
+    100% {
+      width: 100%;
+      opacity: 0.4;
+    }
+  }
+
+  .animate-rakhi-tie {
+    animation: rakhiTieEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-thread-tie {
+    animation: threadTieWrap 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-rakhi-float {
+    animation: rakhiFloatIdle 4.5s ease-in-out infinite;
+  }
+
+  .animate-sacred-aura {
+    animation: sacredAuraPulse 3.5s ease-in-out infinite;
+  }
+
+  .animate-rakhi-shimmer {
+    animation: rakhiShimmer 2.2s ease-in-out infinite;
+    animation-delay: 1.2s;
+  }
+
+  .animate-wrist-tie {
+    animation: wristTieGlow 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}

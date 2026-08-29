@@ -1,0 +1,7 @@
+{
+  "name": "Send a Rakhi",
+  "description": "Create and share personalized, animated digital Rakhi greetings for Raksha Bandhan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
